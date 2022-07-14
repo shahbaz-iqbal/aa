@@ -21,7 +21,7 @@
 					</ol>
 				</nav>
 			</div>
-					</div>
+		</div>
 		<!--end breadcrumb-->
 
 		<div class="card">
@@ -32,11 +32,12 @@
 					<div class="row">
 						<div class="col-lg-10">
 							<div class="border border-3 p-4 rounded">
-								<form action="">
+								<form action="{{url('/admin/complaint_procedure_update')}}" method="POST" enctype="multipart/form-data">
+									@csrf
 									<div class="card">
 										<div class="card-body">
 											<label for="mytextarea">Complaint Procedure</label> <br><br>
-											<textarea id="mytextarea" name="mytextarea">Hello, World!</textarea>
+											<textarea id="mytextarea" name="description">{{$complain->description}}</textarea>
 
 										</div>
 									</div>

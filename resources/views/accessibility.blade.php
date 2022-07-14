@@ -32,11 +32,12 @@
 					<div class="row">
 						<div class="col-lg-10">
 							<div class="border border-3 p-4 rounded">
-								<form action="">
+							<form action="{{url('/admin/accessibility_update')}}" method="POST" enctype="multipart/form-data">
+									@csrf
 									<div class="card">
 										<div class="card-body">
 											<label for="mytextarea">Accessibility </label> <br><br>
-											<textarea id="mytextarea" name="mytextarea">Hello, World!</textarea>
+											<textarea id="mytextarea" name="description">{{$accessibility->description}}</textarea>
 
 										</div>
 									</div>

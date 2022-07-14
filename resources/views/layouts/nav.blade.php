@@ -14,7 +14,7 @@
 	<!--navigation-->
 	<ul class="metismenu" id="menu">
 		<li>
-			<a href="{{ url('admin/index') }}">
+			<a href="{{ url('admin') }}">
 				<div class="parent-icon"><i class='bx bx-category'></i>
 				</div>
 				<div class="menu-title">Dashboard</div>
@@ -70,9 +70,9 @@
 				<div class="menu-title">Team</div>
 			</a>
 			<ul>
-				<li> <a href="{{ url('admin/index') }}"><i class="bx bx-right-arrow-alt"></i>View</a>
+				<li> <a href="{{ url('admin/team') }}"><i class="bx bx-right-arrow-alt"></i>View</a>
 				</li>
-				<li> <a href="{{ url('admin/add_new_slider') }}"><i class="bx bx-right-arrow-alt"></i>Add New</a>
+				<li> <a href="{{ url('admin/team_add') }}"><i class="bx bx-right-arrow-alt"></i>Add New</a>
 				</li>
 
 			</ul>
@@ -135,17 +135,12 @@
 
 		<li>
 			<a href="javascript:;" class="has-arrow">
-				<div class="parent-icon"><i class='bx bx-mobile'></i>
-				</div>
+				<div class="parent-icon"><i class='bx bx-mobile'></i></div>
 				<div class="menu-title">Contact</div>
 			</a>
 			<ul>
-				<li> <a href="{{ url('admin/contact') }}"><i class="bx bx-right-arrow-alt"></i>View</a>
-				</li>
-				<li> <a href="{{ url('admin/add_new_contact') }}"><i class="bx bx-right-arrow-alt"></i>Add New</a>
-				</li>
-
-
+				<li> <a href="{{ url('admin/contact') }}"><i class="bx bx-right-arrow-alt"></i>View</a></li>
+				<li> <a href="{{ url('admin/add_new_contact') }}"><i class="bx bx-right-arrow-alt"></i>Add New</a></li>
 			</ul>
 		</li>
 
@@ -153,7 +148,7 @@
 			<a href="javascript:;" class="has-arrow">
 				<div class="parent-icon"><i type="solid" class='bx bx-wrench'></i>
 				</div>
-				<div class="menu-title">Site Configuration </div>
+				<div class="menu-title">Site Configuration</div>
 			</a>
 			<ul>
 				<li> <a href="{{ url('admin/complaint_procedure') }}"><i class="bx bx-right-arrow-alt"></i>Complaint Procedure</a>
@@ -174,12 +169,39 @@
 				</li>
 				<li> <a href="{{ url('admin/setting') }}"><i class="bx bx-right-arrow-alt"></i>Site Info</a>
 				</li>
-
+				<li> <a href="{{ url('admin/contact_us') }}"><i class="bx bx-right-arrow-alt"></i>Contact Us</a>
+				</li>
+				<li> <a href="{{ url('admin/apply_us') }}"><i class="bx bx-right-arrow-alt"></i>Apply Info</a>
+				</li>
+			</ul>
+		</li>
+		<li>
+			<a href="javascript:;" class="has-arrow">
+				<div class="parent-icon"><i class='bx bx-dollar-circle'></i>
+				</div>
+				<div class="menu-title">Practice Category</div>
+			</a>
+			<ul>
+				<li> <a href="{{ url('admin/cv_category_category') }}"><i class="bx bx-right-arrow-alt"></i>View</a>
+				</li>
+				<li> <a href="{{ url('admin/cv_category_add_new_category') }}"><i class="bx bx-right-arrow-alt"></i>Add New</a>
+				</li>
 
 			</ul>
 		</li>
+		<li>
 
+			<a href="{{ url('admin/emergency_contact') }}">
+			<div class="parent-icon"><i class='bx bx-plus'></i></div>Emergency Contact
+				<!-- <div class="menu-title"><i class="bx bx-emergency"></i>Emergency Contact</div> -->
 
+			</a>
+
+		</li>
+		<li> <a href="{{ url('/logout') }}">
+				<div class="parent-icon"><i class='bx bx-box'></i></div>Logout
+			</a>
+		</li>
 	</ul>
 	<!--end navigation-->
 </div>

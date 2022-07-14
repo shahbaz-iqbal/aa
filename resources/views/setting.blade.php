@@ -33,18 +33,25 @@
 					<div class="row">
 						<div class="col-lg-10">
 							<div class="border border-3 p-4 rounded">
-								<form action="">
-									<div class="mb-3">
+								<form action="{{url('/admin/setting_update')}}" method="POST" enctype="multipart/form-data">
+									@csrf
+									<!-- <div class="mb-3">
 										<label for="inputProductTitle" class="form-label"> Title</label>
-										<input type="text" class="form-control" id="inputProductTitle" placeholder="Enter title">
+										<input type="text" class="form-control" name="title" id="inputProductTitle" placeholder="Enter title" value="{{$setting->title}}">
 									</div>
 									<div class="mb-3">
 										<label for="inputProductTitle" class="form-label"> Subtitle</label>
-										<input type="text" class="form-control" id="inputProductTitle" placeholder="Enter Subtitle">
+										<input type="text" class="form-control" name="sub_title" id="inputProductTitle" placeholder="Enter Subtitle" value="{{$setting->sub_title}}">
+									</div> -->
+									<div class="input-group mb-3">
+										<input type="file" name="file" class="form-control" id="inputGroupFile02">
+										<input type="hidden" name="old_image" value="{{$setting->image}}">
+										<label class="input-group-text" for="inputGroupFile02">Header Logo</label>
 									</div>
 									<div class="input-group mb-3">
-										<input type="file" class="form-control" id="inputGroupFile02">
-										<label class="input-group-text" for="inputGroupFile02">Upload Logo</label>
+										<input type="file" name="file1" class="form-control" id="inputGroupFile02">
+										<input type="hidden" name="old_image1" value="{{$setting->footer_image}}">
+										<label class="input-group-text" for="inputGroupFile02">Footer Logo</label>
 									</div>
 							</div>
 						</div>
@@ -64,28 +71,27 @@
 					<div class="row">
 						<div class="col-lg-10">
 							<div class="border border-3 p-4 rounded">
-
-									<div class="mb-3">
-										<label for="inputProductTitle" class="form-label"> Facebook</label>
-										<input type="text" class="form-control" id="inputProductTitle" placeholder="Enter url">
+								<div class="mb-3">
+									<label for="inputProductTitle" class="form-label"> Facebook</label>
+									<input type="text" class="form-control" name="facebook" value="{{$setting->facebook}}" id="inputProductTitle" placeholder="Enter url">
+								</div>
+								<div class="mb-3">
+									<label for="inputProductTitle" class="form-label"> Linkdin</label>
+									<input type="text" class="form-control" name="linkdin" value="{{$setting->linkdin}}" id="inputProductTitle" placeholder="Enter url">
+								</div>
+								<div class="mb-3">
+									<label for="inputProductTitle" class="form-label"> Twitter</label>
+									<input type="text" class="form-control" name="twitter" value="{{$setting->twitter}}" id="inputProductTitle" placeholder="Enter url">
+								</div>
+								<div class="mb-3">
+									<label for="inputProductTitle" class="form-label"> Trustpilot</label>
+									<input type="text" class="form-control" name="trustpilot" value="{{$setting->trustpilot}}" id="inputProductTitle" placeholder="Enter url">
+								</div>
+								<div class="col-12">
+									<div class="d-grid">
+										<button type="submit" class="btn btn-light">Save</button>
 									</div>
-									<div class="mb-3">
-										<label for="inputProductTitle" class="form-label"> Linkdin</label>
-										<input type="text" class="form-control" id="inputProductTitle" placeholder="Enter url">
-									</div>
-									<div class="mb-3">
-										<label for="inputProductTitle" class="form-label"> Twitter</label>
-										<input type="text" class="form-control" id="inputProductTitle" placeholder="Enter url">
-									</div>
-									<div class="mb-3">
-										<label for="inputProductTitle" class="form-label"> Trustpilot</label>
-										<input type="text" class="form-control" id="inputProductTitle" placeholder="Enter url">
-									</div>
-									<div class="col-12">
-										<div class="d-grid">
-											<button type="submit" class="btn btn-light">Save</button>
-										</div>
-									</div>
+								</div>
 								</form>
 							</div>
 						</div>
